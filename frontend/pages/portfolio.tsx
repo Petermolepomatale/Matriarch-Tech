@@ -19,16 +19,25 @@ export default function Portfolio(){
         <title>Portfolio — Matriarch Tech</title>
       </Head>
       <Navbar />
-      <main className="max-w-6xl mx-auto p-8">
-        <h1 className="text-3xl font-bold">See Our Herd's Journey</h1>
-        <p className="mt-3 text-lg">A showcase of projects where we've guided businesses to greener pastures.</p>
-        <div className="mt-8 grid md:grid-cols-2 gap-6">
-          {projects.map(p => (
-            <div key={p.id} className="card">
-              <h3 className="font-semibold text-xl text-accent-sage">{p.title}</h3>
-              <p className="mt-3">{p.description}</p>
-            </div>
-          ))}
+      <main className="pt-28">
+        <div className="max-w-7xl mx-auto px-6 py-16">
+          <div className="text-center mb-12">
+            <h1 className="text-5xl font-bold mb-4">See Our Herd's Journey</h1>
+            <div className="w-24 h-1 bg-accent-sage mx-auto mb-6"></div>
+            <p className="text-xl text-slate-700 max-w-3xl mx-auto">
+              A showcase of projects where we've guided businesses to greener pastures.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            {projects.map(p => (
+              <div key={p.id} className="card p-8">
+                <div className="text-4xl mb-4">🚀</div>
+                <h3 className="font-bold text-2xl text-accent-sage mb-4">{p.title}</h3>
+                <p className="text-lg text-slate-700 leading-relaxed">{p.description}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </main>
       <Footer />
